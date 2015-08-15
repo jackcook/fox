@@ -10,6 +10,7 @@
     <style name="NavTheme" parent="MaterialNavigationDrawerTheme.Light">
         <item name="colorPrimary">#ff8400</item>
         <item name="colorPrimaryDark">#eb7a00</item>
-        <item name="colorAccent">#ffffff</item>
+        <item name="android:textColorPrimary">#ffffff</item>
+        <item name="android:textColorSecondary">#ffffff</item>
     </style>
 </resources>
