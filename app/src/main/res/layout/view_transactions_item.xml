@@ -19,7 +19,7 @@
             android:id="@+id/balance_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Transactions"
+            android:text="Recent Transactions"
             android:textColor="#878787"
             android:textSize="22sp"
             android:layout_gravity="start|center_vertical"/>
@@ -28,12 +28,11 @@
             android:layout_width="fill_parent"
             android:layout_height="16dp" />
 
-        <include layout="@layout/view_transaction" />
-
-        <LinearLayout
+        <ListView
+            android:id="@+id/recent_transactions_list"
             android:layout_width="fill_parent"
-            android:layout_height="20dp" />
-
-        <include layout="@layout/view_transaction" />
+            android:layout_height="225dp"
+            android:dividerHeight="16dp"
+            android:divider="@null" />
     </LinearLayout>
 </LinearLayout>
