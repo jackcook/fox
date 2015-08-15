@@ -1,14 +1,17 @@
 package nyc.jackcook.fox.util;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import nyc.jackcook.fox.R;
+import nyc.jackcook.fox.TransactionActivity;
 
 public class TransactionsAdapter extends BaseAdapter {
 
@@ -46,6 +49,15 @@ public class TransactionsAdapter extends BaseAdapter {
 
             layout.setPadding(padding, padding, padding, padding);
         }
+
+        TextView details = (TextView) layout.findViewById(R.id.details_button);
+        details.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent transactionIntent = new Intent(context, TransactionActivity.class);
+                context.startActivity(transactionIntent);
+            }
+        });
 
         return layout;
     }

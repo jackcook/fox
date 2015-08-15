@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="AppTheme" parent="android:Theme.Material.Light.NoActionBar">
+    <style name="AppTheme" parent="MaterialNavigationDrawerTheme.Light">
         <item name="android:colorPrimary">#ff8400</item>
         <item name="android:colorPrimaryDark">#eb7a00</item>
-        <item name="android:textColor">#ffffff</item>
-        <item name="android:colorAccent">#ffffff</item>
+        <item name="android:textColorPrimary">#ffffff</item>
+        <item name="android:textColorSecondary">#ffffff</item>
+    </style>
+    
+    <style name="AppTheme.Activity" parent="Theme.AppCompat.Light">
+        <item name="android:colorPrimaryDark">#eb7a00</item>
+        <item name="android:textColorPrimary">#ffffff</item>
+        <item name="android:textColorSecondary">#ffffff</item>
     </style>
 
     <style name="NavTheme" parent="MaterialNavigationDrawerTheme.Light">
