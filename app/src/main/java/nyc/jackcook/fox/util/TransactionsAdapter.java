@@ -10,13 +10,13 @@ import android.widget.LinearLayout;
 
 import nyc.jackcook.fox.R;
 
-public class RecentTransactionsAdapter extends BaseAdapter {
+public class TransactionsAdapter extends BaseAdapter {
 
     private Context context;
 
     private static LayoutInflater inflater = null;
 
-    public RecentTransactionsAdapter(Context context) {
+    public TransactionsAdapter(Context context) {
         this.context = context;
 
         this.inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -24,7 +24,7 @@ public class RecentTransactionsAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return 2;
+        return 30;
     }
 
     @Override
@@ -39,7 +39,13 @@ public class RecentTransactionsAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        LinearLayout layout = (LinearLayout) inflater.inflate(R.layout.view_transaction, null);
+        LinearLayout layout = (LinearLayout) inflater.inflate(R.layout.card_transaction, null);
+
+        if (position == 0) {
+            int padding = (int) (context.getResources().getDisplayMetrics().density * 16 + 0.5f); // 16dp
+
+            layout.setPadding(padding, padding, padding, padding);
+        }
 
         return layout;
     }
