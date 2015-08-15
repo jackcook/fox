@@ -40,15 +40,15 @@ public class MainAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        LinearLayout layout = (LinearLayout) inflater.inflate(R.layout.view_balance_item, null);
+        LinearLayout layout = null;
 
-        ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 100);
-
-        CardView card = new CardView(context);
-        card.setBackgroundColor(0xFFFFFFFF);
-        card.setLayoutParams(params);
-
-        layout.addView(card);
+        if (position == 0) {
+            layout = (LinearLayout) inflater.inflate(R.layout.view_balance_item, null);
+        } else if (position == 1) {
+            layout = (LinearLayout) inflater.inflate(R.layout.view_buttons_item, null);
+        } else if (position == 2) {
+            layout = (LinearLayout) inflater.inflate(R.layout.view_transactions_item, null);
+        }
 
         return layout;
     }
