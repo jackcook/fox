@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 
 repositories {
     mavenCentral()
+    maven { url "https://jitpack.io" }
 }
 
 android {
@@ -26,4 +27,6 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'it.neokree:MaterialNavigationDrawer:1.3.3'
+    compile 'com.github.PhilJay:MPAndroidChart:v2.1.3'
+    compile 'com.loopj.android:android-async-http:1.4.8'
 }

@@ -13,4 +13,7 @@
     <string name="recent_transactions">Nyligen Transaktioner</string>
     <string name="menu_home">Hemsida</string>
     <string name="menu_transactions">Transaktioner</string>
+    <string name="menu_charts">Diagram</string>
+    <string name="chart_description">Priset på Bitcoin under det senaste året</string>
+    <string name="usd_to_btc">USD till BTC</string>
 </resources>

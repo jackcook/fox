@@ -1,6 +1,7 @@
 package nyc.jackcook.fox.util;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,7 +12,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 
+import nyc.jackcook.fox.ChartsFragment;
 import nyc.jackcook.fox.R;
+import nyc.jackcook.fox.TransactionActivity;
 
 public class MainAdapter extends BaseAdapter {
 
