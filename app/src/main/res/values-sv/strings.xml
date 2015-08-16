@@ -24,8 +24,11 @@
     <string name="menu_pay">Betala</string>
     <string name="menu_sell">Sälja</string>
     <string name="get_started">För att komma igång, lägg din Bitcoin plånbok</string>
-    <string name="continue_button">Fortsätta</string>
+    <string name="continue_button">FORTSÄTTA</string>
     <string name="coinbase">Coinbase</string>
     <string name="bitcoin_address">Bitcoin Adress</string>
     <string name="bitcoin_amount">BTC Mängd</string>
+    <string name="title_activity_selling">Säljande</string>
+    <string name="you_received">Du fick</string>
+    <string name="you_sent">Du skickade</string>
 </resources>

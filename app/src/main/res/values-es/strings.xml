@@ -17,13 +17,18 @@
     <string name="usd_to_btc">USD a BTC</string>
     <string name="your_balance">Tu Balance</string>
     <string name="coinbase">Coinbase</string>
-    <string name="welcome">BIENVENIDA!</string>
+    <string name="welcome">¡BIENVENIDA!</string>
     <string name="menu_sell">Vender</string>
     <string name="menu_pay">Pagar</string>
-    <string name="continue_button">Continuar</string>
+    <string name="continue_button">CONTINUAR</string>
     <string name="title_activity_loading">Cargando</string>
     <string name="title_activity_paying">Pago</string>
     <string name="title_activity_authenticate">Autenticar</string>
     <string name="bitcoin_address">Dirección Bitcoin</string>
     <string name="bitcoin_amount">Cantidad BTC</string>
+    <string name="you_received">Recibio</string>
+    <string name="you_sent">Enviaste</string>
+    <string name="title_activity_selling">Venta</string>
+    <string name="tap_devices">Aprovechar sus aparatos a pagar</string>
+    <string name="get_started">Para empezar, añada su billetera Bitcoin</string>
 </resources>

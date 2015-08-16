@@ -25,7 +25,10 @@
     <string name="title_activity_authenticate">Authentifier</string>
     <string name="title_activity_loading">Chargement</string>
     <string name="get_started">Pour commencer, ajoutez votre portefeuille Bitcoin</string>
-    <string name="continue_button">Continuer</string>
+    <string name="continue_button">CONTINUER</string>
     <string name="bitcoin_amount">Montant BTC</string>
     <string name="bitcoin_address">Addresse Bitcoin</string>
+    <string name="you_sent">Tu as envoyé</string>
+    <string name="you_received">Tu as reçu</string>
+    <string name="title_activity_selling">Vente</string>
 </resources>
