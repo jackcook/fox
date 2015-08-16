@@ -9,8 +9,8 @@ public class NavigationActivity extends MaterialNavigationDrawer {
 
     @Override
     public void init(Bundle savedInstanceState) {
-        MaterialSection home = newSection("Home", new MainFragment());
-        MaterialSection transactions = newSection("Transactions", new TransactionsFragment());
+        MaterialSection home = newSection(getResources().getString(R.string.menu_home), new MainFragment());
+        MaterialSection transactions = newSection(getResources().getString(R.string.menu_transactions), new TransactionsFragment());
 
         this.addSection(home);
         this.addSection(transactions);

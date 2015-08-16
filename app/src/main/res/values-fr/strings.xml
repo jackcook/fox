@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Fox</string>
+    <string name="title_activity_transaction">Transaction</string>
+    <string name="pay_button">PAYER</string>
+    <string name="sell_button">VENDRE</string>
+    <string name="recent_transactions">Transactions Récentes</string>
+    <string name="transaction_fee">Frais de Transaction</string>
+    <string name="transaction_status">Statut</string>
+    <string name="transaction_time">Temps</string>
+    <string name="your_balance">Votre Solde</string>
+    <string name="transaction_confirmations">Confirmations</string>
+    <string name="menu_transactions">Transactions</string>
+    <string name="menu_home">Maison</string>
+    <string name="details_button">Détails</string>
+</resources>

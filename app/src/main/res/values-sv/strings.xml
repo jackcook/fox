@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Fox</string>
+    <string name="title_activity_transaction">Transaktion</string>
+    <string name="transaction_time">Tidpunkt</string>
+    <string name="transaction_confirmations">Bekräftelser</string>
+    <string name="transaction_status">Status</string>
+    <string name="transaction_fee">Transaktionsavgift</string>
+    <string name="pay_button">BETALA</string>
+    <string name="sell_button">SÄLJA</string>
+    <string name="your_balance">Din Balans</string>
+    <string name="details_button">Detaljer</string>
+    <string name="recent_transactions">Nyligen Transaktioner</string>
+    <string name="menu_home">Hemsida</string>
+    <string name="menu_transactions">Transaktioner</string>
+</resources>

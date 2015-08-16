@@ -19,7 +19,7 @@
             android:id="@+id/balance_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Recent Transactions"
+            android:text="@string/recent_transactions"
             android:textColor="#878787"
             android:textSize="22sp"
             android:layout_gravity="start|center_vertical"/>
