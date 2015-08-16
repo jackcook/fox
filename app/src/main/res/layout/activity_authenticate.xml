@@ -22,14 +22,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="WELCOME!"
+            android:text="@string/welcome"
             android:textSize="28sp"
             android:layout_gravity="center_horizontal" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="To get started, add your Bitcoin wallet"
+            android:text="@string/get_started"
             android:textSize="16sp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="24dp"/>

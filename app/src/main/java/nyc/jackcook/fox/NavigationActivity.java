@@ -20,7 +20,7 @@ public class NavigationActivity extends MaterialNavigationDrawer {
             PreferenceManager.getDefaultSharedPreferences(NavigationActivity.this).edit().putString("access", accessToken).commit();
             PreferenceManager.getDefaultSharedPreferences(NavigationActivity.this).edit().putString("refresh", refreshToken).commit();
         }
-        
+
 
         MaterialSection home = newSection(getResources().getString(R.string.menu_home), new MainFragment());
         MaterialSection transactions = newSection(getResources().getString(R.string.menu_transactions), new TransactionsFragment());

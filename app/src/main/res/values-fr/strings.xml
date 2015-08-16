@@ -16,4 +16,16 @@
     <string name="menu_charts">Graphiques</string>
     <string name="chart_description">Le prix de Bitcoin cours de l\'année dernière</string>
     <string name="usd_to_btc">USD à BTC</string>
+    <string name="welcome">BIENVENUE!</string>
+    <string name="coinbase">Coinbase</string>
+    <string name="title_activity_paying">Payant</string>
+    <string name="menu_sell">Vendre</string>
+    <string name="menu_pay">Payer</string>
+    <string name="tap_devices">Appuyez vos appareils à payer</string>
+    <string name="title_activity_authenticate">Authentifier</string>
+    <string name="title_activity_loading">Chargement</string>
+    <string name="get_started">Pour commencer, ajoutez votre portefeuille Bitcoin</string>
+    <string name="continue_button">Continuer</string>
+    <string name="bitcoin_amount">Montant BTC</string>
+    <string name="bitcoin_address">Addresse Bitcoin</string>
 </resources>

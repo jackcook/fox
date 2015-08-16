@@ -16,4 +16,16 @@
     <string name="menu_charts">Diagram</string>
     <string name="chart_description">Priset på Bitcoin under det senaste året</string>
     <string name="usd_to_btc">USD till BTC</string>
+    <string name="welcome">VÄLKOMMEN!</string>
+    <string name="title_activity_loading">Lastning</string>
+    <string name="title_activity_paying">Betalar</string>
+    <string name="title_activity_authenticate">Autentisera</string>
+    <string name="tap_devices">Tryck på dina enheter för att betala</string>
+    <string name="menu_pay">Betala</string>
+    <string name="menu_sell">Sälja</string>
+    <string name="get_started">För att komma igång, lägg din Bitcoin plånbok</string>
+    <string name="continue_button">Fortsätta</string>
+    <string name="coinbase">Coinbase</string>
+    <string name="bitcoin_address">Bitcoin Adress</string>
+    <string name="bitcoin_amount">BTC Mängd</string>
 </resources>

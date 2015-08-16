@@ -16,4 +16,7 @@
     <string name="transaction_time">時刻</string>
     <string name="usd_to_btc">USD to BTC</string>
     <string name="your_balance">您的餘額</string>
+    <string name="coinbase">Coinbase</string>
+    <string name="menu_pay">付</string>
+    <string name="menu_sell">賣</string>
 </resources>

@@ -16,4 +16,14 @@
     <string name="transaction_time">Tiempo</string>
     <string name="usd_to_btc">USD a BTC</string>
     <string name="your_balance">Tu Balance</string>
+    <string name="coinbase">Coinbase</string>
+    <string name="welcome">BIENVENIDA!</string>
+    <string name="menu_sell">Vender</string>
+    <string name="menu_pay">Pagar</string>
+    <string name="continue_button">Continuar</string>
+    <string name="title_activity_loading">Cargando</string>
+    <string name="title_activity_paying">Pago</string>
+    <string name="title_activity_authenticate">Autenticar</string>
+    <string name="bitcoin_address">Dirección Bitcoin</string>
+    <string name="bitcoin_amount">Cantidad BTC</string>
 </resources>
