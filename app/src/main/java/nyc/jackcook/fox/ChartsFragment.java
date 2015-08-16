@@ -37,8 +37,10 @@ public class ChartsFragment extends Fragment {
                 try {
                     String response = new String(responseBody, "UTF-8");
                     JSONArray values = new JSONObject(response).getJSONArray("values");
+                    JSONArray smavalues = new JSONObject(response).getJSONArray("sma");
 
                     ArrayList<Entry> entries = new ArrayList<>();
+                    ArrayList<Entry> smaentries = new ArrayList<>();
                     ArrayList<String> days = new ArrayList<>();
 
                     for (int i = 0; i < values.length(); i++) {
@@ -57,8 +59,22 @@ public class ChartsFragment extends Fragment {
                     dataSet.setColor(getResources().getColor(R.color.main));
                     dataSet.setCircleSize(0);
 
+                    for (int i = 0; i < smavalues.length(); i++) {
+                        JSONObject value = (JSONObject) smavalues.get(i);
+                        float price = (float) value.getDouble("y");
+
+                        Entry entry = new Entry(price, i);
+                        smaentries.add(entry);
+                    }
+
+                    LineDataSet dataSet1 = new LineDataSet(smaentries, "Simple Moving Average");
+                    dataSet1.setAxisDependency(YAxis.AxisDependency.LEFT);
+                    dataSet1.setColor(getResources().getColor(R.color.sma));
+                    dataSet1.setCircleSize(0);
+
                     ArrayList<LineDataSet> dataSets = new ArrayList<>();
                     dataSets.add(dataSet);
+                    dataSets.add(dataSet1);
 
                     final LineData data = new LineData(days, dataSets);
 

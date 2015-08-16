@@ -2,4 +2,6 @@
 <resources>
     <color name="main">#ff8400</color>
     <color name="status_bar">#eb7a00</color>
+
+    <color name="sma">#34495e</color>
 </resources>
