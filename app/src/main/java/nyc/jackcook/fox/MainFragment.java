@@ -29,7 +29,7 @@ public class MainFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_main, container, false);
 
-        MainAdapter adapter = new MainAdapter(getActivity());
+        MainAdapter adapter = new MainAdapter(getActivity(), (NavigationActivity) getActivity());
 
         ListView cardList = (ListView) view.findViewById(R.id.card_list);
         cardList.setAdapter(adapter);

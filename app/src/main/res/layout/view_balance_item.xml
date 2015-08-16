@@ -29,6 +29,7 @@
                 android:layout_gravity="start|center_vertical"/>
 
             <TextView
+                android:id="@+id/btc_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0.807236 BTC"
@@ -46,6 +47,7 @@
             android:layout_height="wrap_content">
 
             <TextView
+                android:id="@+id/usd_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="$2.08 USD"
@@ -74,6 +76,7 @@
                 android:layout_gravity="start|bottom" />
 
             <ImageButton
+                android:id="@+id/switch_button"
                 android:layout_width="20dp"
                 android:layout_height="16dp"
                 android:scaleType="fitCenter"

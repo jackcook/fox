@@ -38,4 +38,8 @@
     </string-array>
 
     <string name="title_activity_loading">Loading</string>
+    <string name="title_activity_selling">SellingActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
 </resources>

@@ -4,10 +4,15 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 
+import java.util.ArrayList;
+
 import it.neokree.materialnavigationdrawer.MaterialNavigationDrawer;
 import it.neokree.materialnavigationdrawer.elements.MaterialSection;
+import nyc.jackcook.fox.util.RequestManager;
 
 public class NavigationActivity extends MaterialNavigationDrawer {
+
+    public ArrayList<MaterialSection> sections;
 
     @Override
     public void init(Bundle savedInstanceState) {
@@ -17,10 +22,9 @@ public class NavigationActivity extends MaterialNavigationDrawer {
             String accessToken = uri.getQueryParameter("access");
             String refreshToken = uri.getQueryParameter("refresh");
 
-            PreferenceManager.getDefaultSharedPreferences(NavigationActivity.this).edit().putString("access", accessToken).commit();
-            PreferenceManager.getDefaultSharedPreferences(NavigationActivity.this).edit().putString("refresh", refreshToken).commit();
+            RequestManager.setAccessToken(accessToken);
+            RequestManager.setRefreshToken(refreshToken);
         }
-
 
         MaterialSection home = newSection(getResources().getString(R.string.menu_home), new MainFragment());
         MaterialSection transactions = newSection(getResources().getString(R.string.menu_transactions), new TransactionsFragment());
@@ -34,5 +38,17 @@ public class NavigationActivity extends MaterialNavigationDrawer {
         this.addDivisor();
         this.addSection(pay);
         this.addSection(sell);
+
+        sections = new ArrayList<>();
+
+        sections.add(home);
+        sections.add(transactions);
+        sections.add(charts);
+        sections.add(pay);
+        sections.add(sell);
+    }
+
+    @Override
+    public void onBackPressed() {
     }
 }
