@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Fox</string>
+    <string name="chart_description">El precio del bitcoin en el año pasado</string>
+    <string name="details_button">Detalles</string>
+    <string name="menu_charts">Gráficos</string>
+    <string name="menu_home">Inicio</string>
+    <string name="menu_transactions">Transacciones</string>
+    <string name="pay_button">PAGAR</string>
+    <string name="title_activity_transaction">Transaccion</string>
+    <string name="sell_button">VENDER</string>
+    <string name="recent_transactions">Transacciones Recientes</string>
+    <string name="transaction_confirmations">Confirmaciones</string>
+    <string name="transaction_fee">Tarifa de Transacción</string>
+    <string name="transaction_status">Estado</string>
+    <string name="transaction_time">Tiempo</string>
+    <string name="usd_to_btc">USD a BTC</string>
+    <string name="your_balance">Tu Balance</string>
+</resources>

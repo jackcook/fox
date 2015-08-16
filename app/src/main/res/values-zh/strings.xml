@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Fox</string>
+    <string name="chart_description">比特幣在去年的價格</string>
+    <string name="details_button">詳細信息</string>
+    <string name="menu_charts">圖表</string>
+    <string name="menu_home">家</string>
+    <string name="menu_transactions">交易</string>
+    <string name="pay_button">付</string>
+    <string name="recent_transactions">最近的交易</string>
+    <string name="sell_button">賣</string>
+    <string name="title_activity_transaction">交易</string>
+    <string name="transaction_confirmations">確認</string>
+    <string name="transaction_fee">交易費</string>
+    <string name="transaction_status">狀態</string>
+    <string name="transaction_time">時刻</string>
+    <string name="usd_to_btc">USD to BTC</string>
+    <string name="your_balance">您的餘額</string>
+</resources>
