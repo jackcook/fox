@@ -2,6 +2,10 @@
 <resources>
     <color name="main">#ff8400</color>
     <color name="status_bar">#eb7a00</color>
+    <color name="background">#f8f8f8</color>
+    <color name="disabled">#acacac</color>
 
     <color name="sma">#34495e</color>
+    <color name="edittext_border">#e3e3e3</color>
+    <color name="edittext_border_active">#009688</color>
 </resources>

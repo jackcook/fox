@@ -18,5 +18,6 @@
         <item name="colorPrimaryDark">#eb7a00</item>
         <item name="android:textColorPrimary">#ffffff</item>
         <item name="android:textColorSecondary">#ffffff</item>
+        <item name="learningPattern">false</item>
     </style>
 </resources>

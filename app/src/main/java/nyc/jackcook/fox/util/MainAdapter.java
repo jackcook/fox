@@ -1,7 +1,6 @@
 package nyc.jackcook.fox.util;
 
 import android.content.Context;
-import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,12 +8,10 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-
-import nyc.jackcook.fox.ChartsFragment;
 import nyc.jackcook.fox.R;
-import nyc.jackcook.fox.TransactionActivity;
 
 public class MainAdapter extends BaseAdapter {
 
@@ -59,6 +56,14 @@ public class MainAdapter extends BaseAdapter {
             });
         } else if (position == 1) {
             layout = (LinearLayout) inflater.inflate(R.layout.view_buttons_item, null);
+
+            RelativeLayout pay_button = (RelativeLayout) layout.findViewById(R.id.pay_button);
+            pay_button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                }
+            });
         } else if (position == 2) {
             layout = (LinearLayout) inflater.inflate(R.layout.view_transactions_item, null);
 

@@ -15,15 +15,31 @@
             android:label="@string/app_name"
             android:theme="@style/NavTheme" >
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="fox" />
             </intent-filter>
         </activity>
         <activity
             android:name=".TransactionActivity"
             android:label="@string/title_activity_transaction"
             android:theme="@style/AppTheme.Activity" >
+        </activity>
+        <activity
+            android:name=".AuthenticateActivity"
+            android:label="@string/title_activity_authenticate"
+            android:theme="@style/AppTheme.Activity" >
+        </activity>
+        <activity
+            android:name=".LoadingActivity"
+            android:label="@string/title_activity_loading" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 

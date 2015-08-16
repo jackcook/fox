@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="@color/main"
+    tools:context="nyc.jackcook.fox.AuthenticateActivity">
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:background="@color/background"
+        android:layout_alignParentBottom="true" />
+
+    <LinearLayout
+        android:id="@+id/welcome_card"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shadow_sides"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_margin="16dp"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WELCOME!"
+            android:textSize="28sp"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To get started, add your Bitcoin wallet"
+            android:textSize="16sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"/>
+
+        <Spinner
+            android:id="@+id/wallet_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/wallet_providers"
+            android:layout_gravity="center_horizontal"
+            android:prompt="@string/coinbase"
+            android:layout_marginTop="48dp" />
+
+        <TextView
+            android:id="@+id/continueButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/continue_button"
+            android:textColor="@color/main"
+            android:layout_gravity="right"
+            android:layout_marginTop="48dp"
+            android:clickable="true"
+            android:onClick="onClick" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/fox"
+        android:scaleType="fitCenter"
+        android:layout_above="@id/welcome_card"
+        android:layout_marginBottom="28dp" />
+
+</RelativeLayout>

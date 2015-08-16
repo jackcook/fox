@@ -4,6 +4,8 @@
     <string name="menu_home">Home</string>
     <string name="menu_transactions">Transactions</string>
     <string name="menu_charts">Charts</string>
+    <string name="menu_pay">Pay</string>
+    <string name="menu_sell">Sell</string>
 
     <string name="details_button">Details</string>
     <string name="pay_button">PAY</string>
@@ -19,4 +21,21 @@
 
     <string name="chart_description">The price of Bitcoin over the last year</string>
     <string name="usd_to_btc">USD to BTC</string>
+    
+    <string name="bitcoin_address">Bitcoin Address</string>
+    <string name="bitcoin_amount">BTC Amount</string>
+    <string name="tap_devices">Tap your devices to pay</string>
+    <string name="continue_button">CONTINUE</string>
+    <string name="title_activity_paying">PayingActivity</string>
+
+    <string name="title_activity_authenticate">Authenticate</string>
+    <string name="coinbase">Coinbase</string>
+    <string-array name="wallet_providers">
+        <item>Blockchain</item>
+        <item>Coinbase</item>
+    </string-array>
+    <string name="title_activity_loading">LoadingActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
 </resources>
