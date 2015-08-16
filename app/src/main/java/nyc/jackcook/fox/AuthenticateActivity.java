@@ -30,7 +30,7 @@ public class AuthenticateActivity extends Activity {
         continueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://192.168.2.113:3000/cbauth"));
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://default-environment-u3uxmxg5ju.elasticbeanstalk.com/cbauth"));
                 startActivity(intent);
             }
         });

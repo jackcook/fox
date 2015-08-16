@@ -7,13 +7,23 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
+import nyc.jackcook.fox.util.RequestManager;
 import nyc.jackcook.fox.util.TransactionsAdapter;
 
 public class TransactionsFragment extends Fragment {
 
+    private TransactionsAdapter adapter;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        RequestManager.getTransactions(new Runnable() {
+            @Override
+            public void run() {
+                adapter.updateWithTransactions(RequestManager.transactions);
+            }
+        });
     }
 
     @Override
@@ -21,7 +31,7 @@ public class TransactionsFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_transactions, container, false);
 
-        TransactionsAdapter adapter = new TransactionsAdapter(getActivity());
+        adapter = new TransactionsAdapter(getActivity());
 
         ListView transactionsList = (ListView) view.findViewById(R.id.transactions_list);
         transactionsList.setAdapter(adapter);

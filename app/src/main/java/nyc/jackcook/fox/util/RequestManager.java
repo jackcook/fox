@@ -14,13 +14,17 @@ import org.apache.http.Header;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+
 public class RequestManager {
 
     public static Context context;
-    public static String baseURL = "http://192.168.2.113:3000";
+    public static String baseURL = "http://default-environment-u3uxmxg5ju.elasticbeanstalk.com";
 
     public static double btcBalance;
     public static double usdBalance;
+
+    public static ArrayList<Transaction> transactions;
 
     public static void getBalance(final Runnable runnable) {
         AsyncHttpClient client = new AsyncHttpClient();
@@ -37,6 +41,37 @@ public class RequestManager {
 
                     RequestManager.btcBalance = balance_btc;
                     RequestManager.usdBalance = balance_usd;
+
+                    runnable.run();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
+
+            }
+        });
+    }
+
+    public static void getTransactions(final Runnable runnable) {
+        AsyncHttpClient client = new AsyncHttpClient();
+        client.get(context, baseURL + "/cbtxns" + tokens(), new AsyncHttpResponseHandler() {
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
+                try {
+                    String response = new String(responseBody, "UTF-8");
+                    JSONArray objs = new JSONArray(response);
+                    ArrayList<Transaction> transactions = new ArrayList<>();
+
+                    for (int i = 0; i < objs.length(); i++) {
+                        JSONObject obj = objs.getJSONObject(i);
+                        Transaction transaction = new Transaction(obj);
+                        transactions.add(transaction);
+                    }
+
+                    RequestManager.transactions = transactions;
 
                     runnable.run();
                 } catch (Exception e) {
