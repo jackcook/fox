@@ -31,7 +31,7 @@ public class ChartsFragment extends Fragment {
         Log.d("FOX", "sent http request");
 
         AsyncHttpClient client = new AsyncHttpClient();
-        client.get("https://blockchain.info/charts/market-price?format=json", new AsyncHttpResponseHandler() {
+        client.get("http://192.168.2.113:3000/chart", new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                 try {
@@ -43,10 +43,13 @@ public class ChartsFragment extends Fragment {
 
                     for (int i = 0; i < values.length(); i++) {
                         JSONObject value = (JSONObject) values.get(i);
-                        Entry entry = new Entry((float) value.getDouble("y"), i);
+                        String date = value.getString("x");
+                        float price = (float) value.getDouble("y");
+
+                        Entry entry = new Entry(price, i);
                         entries.add(entry);
 
-                        days.add(i, value.getInt("x") + "");
+                        days.add(i, date);
                     }
 
                     LineDataSet dataSet = new LineDataSet(entries, "BTC to USD");
