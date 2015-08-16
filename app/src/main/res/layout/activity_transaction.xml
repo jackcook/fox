@@ -14,15 +14,17 @@
         android:paddingBottom="18dp">
 
         <TextView
+            android:id="@+id/received_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="You received 0.00352 BTC"
+            android:text="@string/you_received"
             android:layout_gravity="start|center_vertical" />
 
         <TextView
+            android:id="@+id/received_text_usd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="$0.93 USD"
+            android:text="$0.00 USD"
             android:layout_gravity="end|center_vertical" />
     </FrameLayout>
     
@@ -51,6 +53,7 @@
                 android:layout_gravity="start|center_vertical" />
 
             <TextView
+                android:id="@+id/time_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="2015-08-06 @ 02:59:23"
@@ -73,9 +76,10 @@
                 android:layout_gravity="start|center_vertical" />
 
             <TextView
+                android:id="@+id/confirmations_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1418"
+                android:text="0"
                 android:layout_gravity="end|center_vertical" />
         </FrameLayout>
 
@@ -95,6 +99,7 @@
                 android:layout_gravity="start|center_vertical" />
 
             <TextView
+                android:id="@+id/fee_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0.0001 BTC"
@@ -117,9 +122,10 @@
                 android:layout_gravity="start|center_vertical" />
 
             <TextView
+                android:id="@+id/status_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Confirmed"
+                android:text="Pending"
                 android:layout_gravity="end|center_vertical" />
         </FrameLayout>
     </LinearLayout>

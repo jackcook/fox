@@ -13,7 +13,9 @@
     <string name="recent_transactions">Recent Transactions</string>
     <string name="your_balance">Your Balance</string>
 
-    <string name="title_activity_transaction">Transaction</string>
+    <string name="title_activity_transaction">Transaction Completed</string>
+    <string name="you_received">You received</string>
+    <string name="you_sent">You sent</string>
     <string name="transaction_time">Time</string>
     <string name="transaction_confirmations">Confirmations</string>
     <string name="transaction_fee">Transaction Fee</string>
@@ -38,7 +40,7 @@
     </string-array>
 
     <string name="title_activity_loading">Loading</string>
-    <string name="title_activity_selling">SellingActivity</string>
+    <string name="title_activity_selling">Selling</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>

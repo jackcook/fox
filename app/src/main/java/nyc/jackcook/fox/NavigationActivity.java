@@ -1,5 +1,7 @@
 package nyc.jackcook.fox;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -16,6 +18,9 @@ public class NavigationActivity extends MaterialNavigationDrawer {
 
     @Override
     public void init(Bundle savedInstanceState) {
+        Bitmap cover_image = BitmapFactory.decodeResource(getResources(), R.drawable.cover_image);
+        setDrawerHeaderImage(cover_image);
+
         Uri uri = getIntent().getData();
 
         if (uri != null) {

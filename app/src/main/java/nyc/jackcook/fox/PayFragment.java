@@ -4,8 +4,13 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.net.Uri;
+import android.nfc.NdefMessage;
+import android.nfc.NfcAdapter;
+import android.nfc.NfcEvent;
+import android.nfc.tech.NfcA;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.os.Parcelable;
 import android.support.annotation.Nullable;
 import android.text.Editable;
 import android.text.Layout;
@@ -21,6 +26,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import nyc.jackcook.fox.util.MainAdapter;
+import nyc.jackcook.fox.util.RequestManager;
 
 public class PayFragment extends Fragment {
 
@@ -77,8 +83,13 @@ public class PayFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 if (canContinue()) {
-                    Intent intent = new Intent(getActivity(), TransactionActivity.class);
-                    startActivity(intent);
+                    RequestManager.makeTransaction(addressText.getText().toString(), amountText.getText().toString(), new Runnable() {
+                        @Override
+                        public void run() {
+                            Intent intent = new Intent(getActivity(), TransactionActivity.class);
+                            startActivity(intent);
+                        }
+                    });
                 }
             }
         });

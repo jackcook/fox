@@ -4,6 +4,11 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.net.Uri;
+import android.nfc.NdefMessage;
+import android.nfc.NdefRecord;
+import android.nfc.NfcAdapter;
+import android.nfc.NfcEvent;
+import android.nfc.tech.NfcA;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.support.annotation.Nullable;
@@ -60,6 +65,7 @@ public class SellFragment extends Fragment {
             public void onClick(View v) {
                 if (canContinue()) {
                     Intent intent = new Intent(getActivity(), SellingActivity.class);
+                    intent.putExtra("amount", amountText.getText().toString());
                     startActivity(intent);
                 }
             }

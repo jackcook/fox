@@ -19,5 +19,6 @@
         <item name="android:textColorPrimary">#ffffff</item>
         <item name="android:textColorSecondary">#ffffff</item>
         <item name="learningPattern">false</item>
+        <item name="drawerType">@integer/DRAWERTYPE_IMAGE</item>
     </style>
 </resources>

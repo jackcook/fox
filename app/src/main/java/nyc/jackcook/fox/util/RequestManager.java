@@ -3,6 +3,7 @@ package nyc.jackcook.fox.util;
 import android.content.Context;
 import android.os.Handler;
 import android.preference.PreferenceManager;
+import android.util.Log;
 
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
@@ -28,6 +29,7 @@ public class RequestManager {
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                 try {
                     String response = new String(responseBody, "UTF-8");
+                    Log.d("FOX", response);
                     JSONObject obj = new JSONArray(response).getJSONObject(0);
 
                     double balance_btc = Double.parseDouble(obj.getJSONObject("balance").getString("amount"));
@@ -37,6 +39,26 @@ public class RequestManager {
                     RequestManager.usdBalance = balance_usd;
 
                     runnable.run();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
+
+            }
+        });
+    }
+
+    public static void makeTransaction(String btcAddress, String btcAmount, final Runnable runnable) {
+        AsyncHttpClient client = new AsyncHttpClient();
+        client.get(context, baseURL + "/cbtx" + tokens() + "&to=" + btcAddress + "&amount=" + btcAmount, new AsyncHttpResponseHandler() {
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
+                try {
+                    String response = new String(responseBody, "UTF-8");
+                    Log.d("FOX", response);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
