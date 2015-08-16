@@ -11,7 +11,6 @@ public class Transaction {
     public double btcAmount;
     public double usdAmount;
     public String date;
-    public boolean confirmed;
     public String recipient;
 
     public Transaction(JSONObject object) {
@@ -22,8 +21,12 @@ public class Transaction {
             this.btcAmount = Double.parseDouble(object.getJSONObject("amount").getString("amount"));
             this.usdAmount = Double.parseDouble(object.getJSONObject("native_amount").getString("amount"));
             this.date = object.getString("created_at");
-//            this.confirmed = !object.getJSONObject("network").getString("status").equals("unconfirmed");
-//            this.recipient = object.getJSONObject("to").getString("address");
+
+            try {
+                this.recipient = object.getJSONObject("to").getString("address");
+            } catch (JSONException e) {
+                this.recipient = "Coinbase Transaction";
+            }
         } catch (JSONException e) {
             e.printStackTrace();
         }

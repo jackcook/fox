@@ -62,8 +62,8 @@ public class MainAdapter extends BaseAdapter {
             RequestManager.getBalance(new Runnable() {
                 @Override
                 public void run() {
-                    btcValue.setText(RequestManager.btcBalance + " BTC");
-                    usdValue.setText("$" + RequestManager.usdBalance + " USD");
+                    btcValue.setText(round(RequestManager.btcBalance, 5) + " BTC");
+                    usdValue.setText("$" + round(RequestManager.usdBalance, 2) + " USD");
                 }
             });
 
@@ -114,5 +114,14 @@ public class MainAdapter extends BaseAdapter {
         }
 
         return layout;
+    }
+
+    public static double round(double value, int places) {
+        if (places < 0) throw new IllegalArgumentException();
+
+        long factor = (long) Math.pow(10, places);
+        value = value * factor;
+        long tmp = Math.round(value);
+        return (double) tmp / factor;
     }
 }

@@ -74,13 +74,14 @@ public class TransactionsAdapter extends BaseAdapter {
             String date = transaction.date.substring(0, transaction.date.length() - 2);
             SimpleDateFormat readFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
             Date parsedDate = readFormat.parse(date);
-            SimpleDateFormat writeFormat = new SimpleDateFormat("MMM dd, yyyy @ HH:mm a");
+            SimpleDateFormat writeFormat = new SimpleDateFormat("MMM dd, yyyy @ hh:mm a");
             dateLabel.setText(writeFormat.format(parsedDate));
         } catch (Exception e) {
             e.printStackTrace();
         }
 
         TextView addressLabel = (TextView) layout.findViewById(R.id.address_label);
+        addressLabel.setText(transaction.recipient);
 
         TextView details = (TextView) layout.findViewById(R.id.details_button);
         details.setOnClickListener(new View.OnClickListener() {
