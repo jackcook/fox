@@ -30,7 +30,7 @@ public class AuthenticateActivity extends Activity {
         continueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://default-environment-u3uxmxg5ju.elasticbeanstalk.com/cbauth"));
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://foxwallet.elasticbeanstalk.com/cbauth"));
                 startActivity(intent);
             }
         });

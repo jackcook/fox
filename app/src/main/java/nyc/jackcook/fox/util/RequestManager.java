@@ -19,7 +19,7 @@ import java.util.ArrayList;
 public class RequestManager {
 
     public static Context context;
-    public static String baseURL = "http://default-environment-u3uxmxg5ju.elasticbeanstalk.com";
+    public static String baseURL = "http://foxwallet.elasticbeanstalk.com";
 
     public static double btcBalance;
     public static double usdBalance;

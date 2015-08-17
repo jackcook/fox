@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Fox</string>
-    <string name="chart_description">El precio del bitcoin en el año pasado</string>
+    <string name="chart_description">El precio de bitcoin en el año pasado</string>
     <string name="details_button">Detalles</string>
     <string name="menu_charts">Gráficos</string>
     <string name="menu_home">Inicio</string>
@@ -17,7 +17,7 @@
     <string name="usd_to_btc">USD a BTC</string>
     <string name="your_balance">Tu Balance</string>
     <string name="coinbase">Coinbase</string>
-    <string name="welcome">¡BIENVENIDA!</string>
+    <string name="welcome">¡BIENVENIDO!</string>
     <string name="menu_sell">Vender</string>
     <string name="menu_pay">Pagar</string>
     <string name="continue_button">CONTINUAR</string>

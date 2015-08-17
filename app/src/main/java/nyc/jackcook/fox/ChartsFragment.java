@@ -31,7 +31,7 @@ public class ChartsFragment extends Fragment {
         Log.d("FOX", "sent http request");
 
         AsyncHttpClient client = new AsyncHttpClient();
-        client.get("http://default-environment-u3uxmxg5ju.elasticbeanstalk.com/chart", new AsyncHttpResponseHandler() {
+        client.get("http://foxwallet.elasticbeanstalk.com/chart", new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                 try {
